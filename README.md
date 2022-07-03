@@ -7,3 +7,10 @@ The first type, which is represented by the doctor, helps him/her in the early d
 As for the second type, which is the patient in general, whether he/she is already suffering from this dreaded disease or just wants to check on his/her condition, he/she can use the website while he/she is at home without going anywhere.
 Through a machine learning model where the user can scan an image and predict if the image is indeed melanoma or not.
 The user can also undergo a simple test and the answers are yes or no to show him a statistical report if he is likely to be infected or contract the disease, in addition to some recommendations to prevent it.
+
+### Land Page
+![Land Page](https://github.com/Muhammad-Gamal/MelaZone/blob/main/images/Screenshot%202022-06-25%20233244.png)
+
+### Image Classification Result.
+![Result](https://github.com/Muhammad-Gamal/MelaZone/blob/main/images/Screenshot%202022-06-28%20025831.png)
+
