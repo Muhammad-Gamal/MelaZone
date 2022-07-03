@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Payment</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel ="stylesheet" type="text/css" href="{{url_for('static', filename='css/style.css')}}">
+        <link rel="icon" type="image/icon type" href="{{url_for('static', filename='images/logo.ico')}}">
+</head>
+<body>
+
+    <div>
+        <svg class="dark-rec2">
+            <rect id="dark-rec2" rx="0" ry="0" x="0" y="0" width="1920" height="1005"></rect>
+        </svg>
+    </div>
+
+    <h1 id="price_head">Payment</h1>
+    <!-----------------left nav bar----------------->
+
+    <nav class="left-nav-home">
+        <ul class="left-ul-home">
+            <a href="/rhome"><img src="{{url_for('static', filename='images/logo.png')}}" alt="logo" width="25" height="25">
+            <h2>MELA'ZONE</h2></a>
+        </ul>
+    </nav>
+
+    <form action="/payment" method="post" >
+        
+            <svg class="Rectangle_5">
+                <rect id="Rectangle_5" rx="10" ry="10" x="0" y="0" width="700" height="600">
+                </rect>
+            </svg>
+            <p id="choose_pay">Choose your payment method</p>
+
+            <img src="{{url_for('static', filename='images/paypal.png')}}" alt="Paypal logo" id="paypal_icon">
+
+            <div class="paypal">
+                <input type="radio" id="paypal" name="option" value="paypal">
+                    <label for="paypal">Paypal</label><br>
+                <span>Safe payment online. Credit card needed.</span>
+            </div>
+
+            <div class="credit_card">
+                <img src="{{url_for('static', filename='images/Visa.png')}}" alt="Paypal logo" id="visa_icon"> <br>
+                <img src="{{url_for('static', filename='images/Master Card.png')}}" alt="Paypal logo" id="master_icon">
+            </div>
+            <div class="credit">
+                <input type="radio" id="credit" name="option" value="credit">
+                    <label for="credit">Credit Crad</label><br>
+                <hr>
+            </div>
+
+            <div class="form-body">
+                <!-- Card Number -->
+                <input type="tel" class="card-number" placeholder="Card Number" name="card" pattern="^(?:4[0-9]{12}(?:[0-9]{3})?)$" required>
+            
+                <!-- Date Field -->
+                <input type="text" class="expire" placeholder="Expire Date MM/YY" required>
+
+                <!-- Card Verification Field -->
+            <div class="card-verification">
+                <div>
+                <input type="text" placeholder="CVV"  class="cvv-input" required>
+                <input type="text" placeholder="Name on card" id="name_on_card" required />
+                <button type="submit" id="submit_pay">Submit</button>
+                </div>
+            </div>
+            <input type="hidden" id="u_email" name ="mail"/>
+            <script>
+                document.getElementById("u_email").value = localStorage.textvalue;
+            </script>
+    </form>
+
+    
+</body>
+</html>

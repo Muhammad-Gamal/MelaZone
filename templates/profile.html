@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <title>Edit Profile</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel ="stylesheet" type="text/css" href="{{url_for('static', filename='css/style.css')}}">
+    <link rel="icon" type="image/icon type" href="{{url_for('static', filename='images/logo.ico')}}"/>
+  </head>
+<body>
+    <div>
+        <svg class="dark-rec2">
+          <rect
+            id="dark-rec2"
+            rx="0"
+            ry="0"
+            x="0"
+            y="0"
+            width="1920"
+            height="1005"
+          ></rect>
+        </svg>
+      </div>
+      {% for message in get_flashed_messages() %}
+	
+      <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        {{ message }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+    
+      
+    {% endfor %}
+      
+      <!-----------------logo----------------->
+  
+      <nav class="left-nav-home">
+        <ul class="left-ul-home">
+          <a href="/rhome"><img src="{{url_for('static', filename='images/logo.png')}}" alt="logo" width="25" height="25" />
+          <h2>MELA'ZONE</h2></a>
+        </ul>
+      </nav>
+
+      <!-----------------Edit Form----------------->
+
+      <form action="/edit" class="profile" method="post" enctype="multipart/form-data">
+        
+        <div class="profile-pic-div">
+          <img id="photo">
+          <input type="file" id="file" name="profileImage">
+          <label for="file" id="uploadBtn" name="pic">Choose Photo</label>
+        </div>
+       
+        <div class="prof_details">
+          <h1 id="edit_prof">Edit Profile</h1>
+            <div class="edit_left"> 
+              <label for="full_name_">Full Name</label>
+                <input type="text" id="full_name_"  name="full_name" required>
+              <label for="nick_name_">Nick Name</label>
+                <input type="text" id="nick_name_"  name="nick_name" required>
+              <label for="job_tit_">Account Role</label>
+                <input type="text" id="job_tit_"  name='job' required>  
+            </div>
+            
+
+            <div class="edit_right" action="/edit">
+              <label for="edit_mail">Email</label>
+                <input type="email" id="edit_mail_"  name="email" required>
+              <label for="edit_pass_">Password</label>
+                <input type="password" id="edit_pass_"   name= 'password' placeholder="*********" required>
+              <label for="edit_number_">Phone</label>
+                <input type="tel" id="edit_number_" pattern="^(00201|\+201|01)[0-2,5]{1}[0-9]{8}$"  name="phone" placeholder="+2010xxxxxxxx" required> 
+            </div>
+          </div>
+          <button type="submit" id="save">Save Changes</button>
+      </form>
+    </div>
+    <script>
+      //declearing html elements
+
+      const imgDiv = document.querySelector('.profile-pic-div');
+      const img = document.querySelector('#photo');
+      const file = document.querySelector('#file');
+      const uploadBtn = document.querySelector('#uploadBtn');
+
+      //if user hover on img div 
+
+      imgDiv.addEventListener('mouseenter', function(){
+          uploadBtn.style.display = "block";
+      });
+
+      //if we hover out from img div
+
+      imgDiv.addEventListener('mouseleave', function(){
+          uploadBtn.style.display = "none";
+      });
+
+      //lets work for image showing functionality when we choose an image to upload
+
+      //when we choose a foto to upload
+
+      file.addEventListener('change', function(){
+          //this refers to file
+          const choosedFile = this.files[0];
+
+          if (choosedFile) {
+
+              const reader = new FileReader(); //FileReader is a predefined function of JS
+
+              reader.addEventListener('load', function(){
+                  img.setAttribute('src', reader.result);
+              });
+
+              reader.readAsDataURL(choosedFile);
+
+              //Allright is done
+
+              //please like the video
+              //comment if have any issue related to vide & also rate my work in comment section
+
+              //And aslo please subscribe for more tutorial like this
+
+              //thanks for watching
+          }
+      });
+    </script>
+</body>
+</html>

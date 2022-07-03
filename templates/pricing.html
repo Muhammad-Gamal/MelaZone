@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Pricing</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel ="stylesheet" type="text/css" href="{{url_for('static', filename='css/style.css')}}">
+        <link rel="icon" type="image/icon type" href="{{url_for('static', filename='images/logo.ico')}}">
+</head>
+<body>
+    <!-----------------left nav bar----------------->
+
+    <nav class="left-nav-home">
+        <ul class="left-ul-home">
+            <a href="/rhome"><img src="{{url_for('static', filename='images/logo.png')}}" alt="logo" width="25" height="25"></a>
+            <a href="/rhome"><h2>MELA'ZONE</h2></a>
+            <div class="dropdown">
+                <button class="dropbtn_gall">Tools</button>
+                <div class="dropdown-content">
+                  <a href="/tools">Image Processing</a>
+                  <a href="/q_test_user">Quik Test</a>
+                </div>
+            </div>
+            <a href="/gallery"><li id="gall_pricing">Gallery</li></a>
+            <a href="/contact"><li id="contact_pricing">Contact</li></a>
+            <a href="/pricing"><li id="price">Pricing</li></a>
+        </ul>
+    </nav>
+
+    <!-----------------right nav bar----------------->
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <div class="prof_img">
+            <div class="image_side">
+                <img src="{{url_for('static', filename=image)}}" id="photo">
+            </div>
+        </div>
+            <span>
+                <span id = "name">{{name}}</span> <br>
+                <span id="ac_span">{{role}}</span>
+            </span>
+            <a href="profile.html">Edit profile</a>
+            <a href="improve ux.html">Improve user experience</a>
+            <a href="#">Privacy policy</a>
+            <a href="#">FQA</a>
+            <a href="/logout"><button id="side_btn">Log Out</button></a>
+        </div>
+    <nav id="ac" onclick="openNav()">
+
+        <div class="profile-pic-div-1">
+            <img src="{{url_for('static', filename=image)}}" id="photo">
+        </div>
+
+        <span class="account_info">
+            <span id="ac_name">{{name}}</span> <br>
+            <span id="ac_id">{{role}}</span>
+        </span>
+    </nav>
+    <!-----------------right nav bar----------------->
+
+    <div class="price_container">
+        <div class="patient_price">
+            <img src="{{url_for('static', filename='images/Patient.png')}}" alt="paient"><br>
+            <span>Patient</span><br>
+            <p>You could use our service up to
+                5 times for free then you have to
+                pay a monthly subscription for
+                using our service, patient will be
+                able to follow up with us with the 
+                latest analysis and get instructions
+                and suggestions for your healthcare.  
+            </p><br>
+            <span>5.99$/mo</span><br><br>
+            <a href="/payment"><button>Subscribe Now</button></a>
+        </div>
+
+        <div class="hos_price">
+            <img src="{{url_for('static', filename='images/hos.png')}}" alt="paient" width="110" height="108"><br>
+            <span>Hospitals</span><br>
+            <p>Hospitals and clinics should pay
+                a monthly subscription to be 
+                able to use our system in their
+                working places. The system will
+                match their needs, also the latest
+                updates will be available for the 
+                hospitals or clinics.  
+            </p><br>
+            <span>20.99$/mo</span><br> <br>
+            <a href="/payment"><button>Subscribe Now</button></a>
+        </div>
+
+        <div class="doc_price">
+            <img src="{{url_for('static', filename='images/Doctor.png')}}" alt="paient"><br>
+            <span>Doctor</span><br>
+            <p>Doctors also can use our system
+                in their own clinics to detect this
+                specific type of cancer through 
+               subscription payed to us. All 
+               updates will be available until 
+               the month end then they have 
+               to renew their subscription.                
+            </p><br>
+            <span>10.99$/mo</span><br><br>
+            <a href="/payment"><button>Subscribe Now</button></a>
+        </div>
+
+    </div>
+</body>
+
+<script>
+    function openNav() {
+      document.getElementById("mySidebar").style.width = "300px";
+      document.getElementById("main").style.marginRight = "250px";
+    }
+    
+    function closeNav() {
+      document.getElementById("mySidebar").style.width = "0";
+      document.getElementById("main").style.marginRight= "0";
+    }
+</script>
+</html>

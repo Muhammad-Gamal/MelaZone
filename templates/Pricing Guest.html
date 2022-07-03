@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Pricing</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel ="stylesheet" type="text/css" href="{{url_for('static', filename='css/style.css')}}">
+        <link rel="icon" type="image/icon type" href="{{url_for('static', filename='images/logo.ico')}}">
+</head>
+<body>
+
+    <div>
+        <svg class="dark-rec2">
+            <rect id="dark-rec2" rx="0" ry="0" x="0" y="0" width="1920" height="1005"></rect>
+        </svg>
+    </div>
+
+    <h1 id="price_head">Pricing Table</h1>
+    <!-----------------left nav bar----------------->
+
+    <nav class="left-nav-home">
+        <a href="/">
+            <ul class="left-ul-home">
+                <img src="{{url_for('static', filename='images/logo.png')}}" alt="logo" width="25" height="25">
+                <h2>MELA'ZONE</h2>
+            </ul>
+        </a>
+    </nav>
+
+
+    <div class="price_container">
+        <div class="patient_price">
+            <img src="{{url_for('static', filename='images/Patient.png')}}" alt="paient"><br>
+            <span>Patient</span><br>
+            <p>You could use our service up to
+                5 times for free then you have to
+                pay a monthly subscription for
+                using our service, patient will be
+                able to follow up with us with the 
+                latest analysis and get instructions
+                and suggestions for your healthcare.  
+            </p><br>
+            <span>5.99$/mo</span><br><br>
+            <a href="/signup"><button>Subscribe Now</button></a>
+        </div>
+
+        <div class="hos_price">
+            <img src="{{url_for('static', filename='images/hos.png')}}" alt="paient" width="110" height="108"><br>
+            <span>Hospitals</span><br>
+            <p>Hospitals and clinics should pay
+                a monthly subscription to be 
+                able to use our system in their
+                working places. The system will
+                match their needs, also the latest
+                updates will be available for the 
+                hospitals or clinics.  
+            </p><br>
+            <span>20.99$/mo</span><br> <br>
+            <a href="/signup"><button>Subscribe Now</button></a>
+        </div>
+
+        <div class="doc_price">
+            <img src="{{url_for('static', filename='images/Doctor.png')}}" alt="paient"><br>
+            <span>Doctor</span><br>
+            <p>Doctors also can use our system
+                in their own clinics to detect this
+                specific type of cancer through 
+               subscription payed to us. All 
+               updates will be available until 
+               the month end then they have 
+               to renew their subscription.                
+            </p><br>
+            <span>10.99$/mo</span><br><br>
+            <a href="/signup"><button>Subscribe Now</button></a>
+        </div>
+
+    </div>
+</body>
+</html>

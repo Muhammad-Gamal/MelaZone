@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Risk Predictor</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel ="stylesheet" type="text/css" href="{{url_for('static', filename='css/style.css')}}">
+    <link rel="icon" type="image/icon type" href="{{url_for('static', filename='images/logo.ico')}}">
+  </head>
+  <body>
+    <div>
+      <svg class="dark-rec2">
+        <rect
+          id="dark-rec2"
+          rx="0"
+          ry="0"
+          x="0"
+          y="0"
+          width="1920"
+          height="1005"
+        ></rect>
+      </svg>
+    </div>
+
+    <h1 id="price_head">Risk Predictor</h1>
+    <!-----------------left nav bar----------------->
+
+    <nav class="left-nav-home">
+      <a href="/">
+          <ul class="left-ul-home">
+              <img src="{{ url_for('static',filename='images/logo.png') }}" alt="logo" width="25" height="25"><h2>MELA'ZONE</h2>
+          </ul>
+      </a>
+  </nav>
+
+    <div class="all_pr">
+      <div
+        class="pr predictor"
+        name="very_much_below_average"
+        id="Very_much_below_average"
+      >
+        <svg class="Path_681" viewBox="0 0 298 146">
+          <path
+            id="Path_681"
+            d="M 0 0 L 298 0 L 298 146 L 0 146 L 0 0 Z"
+          ></path>
+        </svg>
+        <p>
+          Very much <br />
+          below average
+        </p>
+      </div>
+
+      <div class="pr predictor_2" id="Below_average">
+        <svg class="Rectangle_135">
+          <rect
+            id="Rectangle_135"
+            rx="0"
+            ry="0"
+            x="0"
+            y="0"
+            width="200"
+            height="98.8"
+          ></rect>
+        </svg>
+        <p>Below average</p>
+      </div>
+
+      <div class="pr predictor_3" id="Average">
+        <svg class="Rectangle_136">
+          <rect
+            id="Rectangle_136"
+            rx="0"
+            ry="0"
+            x="0"
+            y="0"
+            width="200"
+            height="98.8"
+          ></rect>
+        </svg>
+        <p>Average</p>
+      </div>
+
+      <div class="pr predictor_4" id="above_average">
+        <svg class="Rectangle_137">
+          <rect
+            id="Rectangle_137"
+            rx="0"
+            ry="0"
+            x="0"
+            y="0"
+            width="200"
+            height="98.8"
+          ></rect>
+        </svg>
+        <p>Above average</p>
+      </div>
+
+      <div class="pr predictor_5" id="Very_much_above_average">
+        <svg class="Rectangle_138">
+          <rect
+            id="Rectangle_138"
+            rx="0"
+            ry="0"
+            x="0"
+            y="0"
+            width="200"
+            height="98.8"
+          ></rect>
+        </svg>
+        <p>
+          Very much <br />
+          above average
+        </p>
+      </div>
+    </div>
+
+    <div class="idecator">
+      <svg class="Line_71" viewBox="0 0 1570 2">
+        <path id="Line_71" d="M 0 0 L 1570 0"></path>
+      </svg>
+      <span id="s1">0</span>
+
+      <svg class="Line_74" viewBox="0 0 2 38">
+        <path id="Line_74" d="M 0 38 L 0 0"></path>
+      </svg>
+      <span id="s2">5</span>
+      <svg class="Line_75" viewBox="0 0 2 38">
+        <path id="Line_75" d="M 0 38 L 0 0"></path>
+      </svg>
+      <span id="s3">10</span>
+      <svg class="Line_76" viewBox="0 0 2 38">
+        <path id="Line_76" d="M 0 38 L 0 0"></path>
+      </svg>
+    </div>
+
+    <div class="recommend">
+      <span>Recommendations</span>
+      <p>
+        We hope you visit your doctor and we also recommend that you do <br />a
+        periodically check to reassure your health.
+      </p>
+    </div>
+
+    <div class="about_mela">
+      <span>About Melanoma</span>
+      <p>
+        Melanoma develops in the cells that produce melanin the pigment that
+        gives your skin its color. <br />
+        Melanoma can also form in your eyes and, rarely, inside your body, such
+        as in your nose or throat. <br />
+        Knowing the warning signs of skin cancer can help ensure that cancerous
+        changes are detected <br />
+        and treated before the cancer has spread. Melanoma can be treated
+        successfully if it is detected <br />
+        early.
+      </p>
+    </div>
+
+    <div>
+      <a href="/q_test"> <button id="take_another">Take another</button></a>
+      
+    </div>
+
+    <svg class="dark-rec3">
+      <rect
+        id="dark-rec3"
+        rx="0"
+        ry="0"
+        x="0"
+        y="0"
+        width="1920"
+        height="1005"
+      ></rect>
+    </svg>
+    <script>
+      const resultEndPoint = window.location.search;
+      const allPr = document.querySelectorAll('.all_pr .pr');
+      let box = '';
+      const result = window.location.search
+        .split('')
+        .map((el, ind) => {
+          return el == '=' ? resultEndPoint.slice(ind + 1) : '';
+        })
+        .join('');
+      if (result >= 0 && result <= 20) {
+        box = 'Very_much_below_average';
+      } else if (result >= 21 && result <= 40) {
+        box = 'Below_average';
+      } else if (result >= 41 && result <= 60) {
+        box = 'Average';
+      } else if (result >= 61 && result <= 80) {
+        box = 'above_average';
+      } else if (result >= 81 && result <= 100) {
+        box = 'Very_much_above_average';
+      }
+      console.log(result);
+      allPr.forEach((a) => {
+        if (a.id !== box) {
+          document.getElementById(`${a.id}`).style.opacity = '20%';
+          //   a.id.style.opacity = '20%';
+        }
+      });
+    </script>
+    <script src="{{ url_for('static',filename='js/file.js') }}"></script>
+  </body>
+</html>
+<!-- allPr.forEach((a) => {
+        if (a.id !== result) {
+          document.getElementById(`${a.id}`).style.opacity = '20%';
+          //   a.id.style.opacity = '20%';
+        }
+      }); -->

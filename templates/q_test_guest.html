@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Quik Test</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel ="stylesheet" type="text/css" href="{{url_for('static', filename='css/style.css')}}">
+    <link rel="icon" type="image/icon type" href="{{url_for('static', filename='images/logo.ico')}}">
+    </head>
+    <body style="height: 1900px; width: 1920px;">
+    <div>
+        <svg class="dark-rec5">
+          <rect
+            id="dark-rec5"
+            rx="0"
+            ry="0"
+            x="0"
+            y="0"
+            width="1920"
+            height="2500"
+          ></rect>
+        </svg>
+      </div>
+
+       <!-----------------logo----------------->
+  
+       <nav class="left-nav-home">
+        <a href="/">
+            <ul class="left-ul-home">
+                <img src="{{ url_for('static',filename='images/logo.png') }}" alt="logo" width="25" height="25"><h2>MELA'ZONE</h2>
+            </ul>
+        </a>
+    </nav>
+
+      <span id="qtest">Quik Test</span>
+
+      <form action="" class="qtest_list">
+
+        <div class="qtest_details">
+            <div class="col_left"> 
+
+              <label for="full_name">Full Name</label>
+                <input type="text" id="full_name" class='j' placeholder="Zayn Ahmed Maged" required>
+
+              <label for="nick_name_">Job Title</label>
+                <input type="text" id="nick_name_" class='j' placeholder="Accountant" required>
+
+              <label for="regl">Region</label>
+                <select id="reg" class='j' required>
+                    <option value="  " selected disabled>Select your country</option>
+                    <option value="AF">Afghanistan</option>
+                    <option value="AL">Albania</option>
+                    <option value="DZ">Algeria</option>
+                    <option value="AS">American Samoa</option>
+                    <option value="AD">Andorra</option>
+                    <option value="AO">Angola</option>
+                    <option value="AI">Anguilla</option>
+                    <option value="AQ">Antarctica</option>
+                    <option value="AG">Antigua and Barbuda</option>
+                    <option value="AR">Argentina</option>
+                    <option value="AM">Armenia</option>
+                    <option value="AW">Aruba</option>
+                    <option value="AU">Australia</option>
+                    <option value="AT">Austria</option>
+                    <option value="AZ">Azerbaijan</option>
+                    <option value="BS">Bahamas</option>
+                    <option value="BH">Bahrain</option>
+                    <option value="BD">Bangladesh</option>
+                    <option value="BB">Barbados</option>
+                    <option value="BY">Belarus</option>
+                    <option value="BE">Belgium</option>
+                    <option value="BZ">Belize</option>
+                    <option value="BJ">Benin</option>
+                    <option value="BM">Bermuda</option>
+                    <option value="BT">Bhutan</option>
+                    <option value="BO">Bolivia</option>
+                    <option value="BA">Bosnia and Herzegowina</option>
+                    <option value="BW">Botswana</option>
+                    <option value="BV">Bouvet Island</option>
+                    <option value="BR">Brazil</option>
+                    <option value="IO">British Indian Ocean Territory</option>
+                    <option value="BN">Brunei Darussalam</option>
+                    <option value="BG">Bulgaria</option>
+                    <option value="BF">Burkina Faso</option>
+                    <option value="BI">Burundi</option>
+                    <option value="KH">Cambodia</option>
+                    <option value="CM">Cameroon</option>
+                    <option value="CA">Canada</option>
+                    <option value="CV">Cape Verde</option>
+                    <option value="KY">Cayman Islands</option>
+                    <option value="CF">Central African Republic</option>
+                    <option value="TD">Chad</option>
+                    <option value="CL">Chile</option>
+                    <option value="CN">China</option>
+                    <option value="CX">Christmas Island</option>
+                    <option value="CC">Cocos (Keeling) Islands</option>
+                    <option value="CO">Colombia</option>
+                    <option value="KM">Comoros</option>
+                    <option value="CG">Congo</option>
+                    <option value="CD">Congo, the Democratic Republic of the</option>
+                    <option value="CK">Cook Islands</option>
+                    <option value="CR">Costa Rica</option>
+                    <option value="CI">Cote d'Ivoire</option>
+                    <option value="HR">Croatia (Hrvatska)</option>
+                    <option value="CU">Cuba</option>
+                    <option value="CY">Cyprus</option>
+                    <option value="CZ">Czech Republic</option>
+                    <option value="DK">Denmark</option>
+                    <option value="DJ">Djibouti</option>
+                    <option value="DM">Dominica</option>
+                    <option value="DO">Dominican Republic</option>
+                    <option value="TP">East Timor</option>
+                    <option value="EC">Ecuador</option>
+                    <option value="EG">Egypt</option>
+                    <option value="SV">El Salvador</option>
+                    <option value="GQ">Equatorial Guinea</option>
+                    <option value="ER">Eritrea</option>
+                    <option value="EE">Estonia</option>
+                    <option value="ET">Ethiopia</option>
+                    <option value="FK">Falkland Islands (Malvinas)</option>
+                    <option value="FO">Faroe Islands</option>
+                    <option value="FJ">Fiji</option>
+                    <option value="FI">Finland</option>
+                    <option value="FR">France</option>
+                    <option value="FX">France, Metropolitan</option>
+                    <option value="GF">French Guiana</option>
+                    <option value="PF">French Polynesia</option>
+                    <option value="TF">French Southern Territories</option>
+                    <option value="GA">Gabon</option>
+                    <option value="GM">Gambia</option>
+                    <option value="GE">Georgia</option>
+                    <option value="DE">Germany</option>
+                    <option value="GH">Ghana</option>
+                    <option value="GI">Gibraltar</option>
+                    <option value="GR">Greece</option>
+                    <option value="GL">Greenland</option>
+                    <option value="GD">Grenada</option>
+                    <option value="GP">Guadeloupe</option>
+                    <option value="GU">Guam</option>
+                    <option value="GT">Guatemala</option>
+                    <option value="GN">Guinea</option>
+                    <option value="GW">Guinea-Bissau</option>
+                    <option value="GY">Guyana</option>
+                    <option value="HT">Haiti</option>
+                    <option value="HM">Heard and Mc Donald Islands</option>
+                    <option value="VA">Holy See (Vatican City State)</option>
+                    <option value="HN">Honduras</option>
+                    <option value="HK">Hong Kong</option>
+                    <option value="HU">Hungary</option>
+                    <option value="IS">Iceland</option>
+                    <option value="IN">India</option>
+                    <option value="ID">Indonesia</option>
+                    <option value="IR">Iran (Islamic Republic of)</option>
+                    <option value="IQ">Iraq</option>
+                    <option value="IE">Ireland</option>
+                    <option value="IL">Israel</option>
+                    <option value="IT">Italy</option>
+                    <option value="JM">Jamaica</option>
+                    <option value="JP">Japan</option>
+                    <option value="JO">Jordan</option>
+                    <option value="KZ">Kazakhstan</option>
+                    <option value="KE">Kenya</option>
+                    <option value="KI">Kiribati</option>
+                    <option value="KP">Korea, Democratic People's Republic of</option>
+                    <option value="KR">Korea, Republic of</option>
+                    <option value="KW">Kuwait</option>
+                    <option value="KG">Kyrgyzstan</option>
+                    <option value="LA">Lao People's Democratic Republic</option>
+                    <option value="LV">Latvia</option>
+                    <option value="LB">Lebanon</option>
+                    <option value="LS">Lesotho</option>
+                    <option value="LR">Liberia</option>
+                    <option value="LY">Libyan Arab Jamahiriya</option>
+                    <option value="LI">Liechtenstein</option>
+                    <option value="LT">Lithuania</option>
+                    <option value="LU">Luxembourg</option>
+                    <option value="MO">Macau</option>
+                    <option value="MK">
+                    Macedonia, The Former Yugoslav Republic of
+                    </option>
+                    <option value="MG">Madagascar</option>
+                    <option value="MW">Malawi</option>
+                    <option value="MY">Malaysia</option>
+                    <option value="MV">Maldives</option>
+                    <option value="ML">Mali</option>
+                    <option value="MT">Malta</option>
+                    <option value="MH">Marshall Islands</option>
+                    <option value="MQ">Martinique</option>
+                    <option value="MR">Mauritania</option>
+                    <option value="MU">Mauritius</option>
+                    <option value="YT">Mayotte</option>
+                    <option value="MX">Mexico</option>
+                    <option value="FM">Micronesia, Federated States of</option>
+                    <option value="MD">Moldova, Republic of</option>
+                    <option value="MC">Monaco</option>
+                    <option value="MN">Mongolia</option>
+                    <option value="MS">Montserrat</option>
+                    <option value="MA">Morocco</option>
+                    <option value="MZ">Mozambique</option>
+                    <option value="MM">Myanmar</option>
+                    <option value="NA">Namibia</option>
+                    <option value="NR">Nauru</option>
+                    <option value="NP">Nepal</option>
+                    <option value="NL">Netherlands</option>
+                    <option value="AN">Netherlands Antilles</option>
+                    <option value="NC">New Caledonia</option>
+                    <option value="NZ">New Zealand</option>
+                    <option value="NI">Nicaragua</option>
+                    <option value="NE">Niger</option>
+                    <option value="NG">Nigeria</option>
+                    <option value="NU">Niue</option>
+                    <option value="NF">Norfolk Island</option>
+                    <option value="MP">Northern Mariana Islands</option>
+                    <option value="NO">Norway</option>
+                    <option value="OM">Oman</option>
+                    <option value="PK">Pakistan</option>
+                    <option value="PW">Palau</option>
+                    <option value="PA">Panama</option>
+                    <option value="PG">Papua New Guinea</option>
+                    <option value="PY">Paraguay</option>
+                    <option value="PE">Peru</option>
+                    <option value="PH">Philippines</option>
+                    <option value="PN">Pitcairn</option>
+                    <option value="PL">Poland</option>
+                    <option value="PT">Portugal</option>
+                    <option value="PR">Puerto Rico</option>
+                    <option value="QA">Qatar</option>
+                    <option value="RE">Reunion</option>
+                    <option value="RO">Romania</option>
+                    <option value="RU">Russian Federation</option>
+                    <option value="RW">Rwanda</option>
+                    <option value="KN">Saint Kitts and Nevis</option>
+                    <option value="LC">Saint LUCIA</option>
+                    <option value="VC">Saint Vincent and the Grenadines</option>
+                    <option value="WS">Samoa</option>
+                    <option value="SM">San Marino</option>
+                    <option value="ST">Sao Tome and Principe</option>
+                    <option value="SA">Saudi Arabia</option>
+                    <option value="SN">Senegal</option>
+                    <option value="SC">Seychelles</option>
+                    <option value="SL">Sierra Leone</option>
+                    <option value="SG">Singapore</option>
+                    <option value="SK">Slovakia (Slovak Republic)</option>
+                    <option value="SI">Slovenia</option>
+                    <option value="SB">Solomon Islands</option>
+                    <option value="SO">Somalia</option>
+                    <option value="ZA">South Africa</option>
+                    <option value="GS">
+                    South Georgia and the South Sandwich Islands
+                    </option>
+                    <option value="ES">Spain</option>
+                    <option value="LK">Sri Lanka</option>
+                    <option value="SH">St. Helena</option>
+                    <option value="PM">St. Pierre and Miquelon</option>
+                    <option value="SD">Sudan</option>
+                    <option value="SR">Suriname</option>
+                    <option value="SJ">Svalbard and Jan Mayen Islands</option>
+                    <option value="SZ">Swaziland</option>
+                    <option value="SE">Sweden</option>
+                    <option value="CH">Switzerland</option>
+                    <option value="SY">Syrian Arab Republic</option>
+                    <option value="TW">Taiwan, Province of China</option>
+                    <option value="TJ">Tajikistan</option>
+                    <option value="TZ">Tanzania, United Republic of</option>
+                    <option value="TH">Thailand</option>
+                    <option value="TG">Togo</option>
+                    <option value="TK">Tokelau</option>
+                    <option value="TO">Tonga</option>
+                    <option value="TT">Trinidad and Tobago</option>
+                    <option value="TN">Tunisia</option>
+                    <option value="TR">Turkey</option>
+                    <option value="TM">Turkmenistan</option>
+                    <option value="TC">Turks and Caicos Islands</option>
+                    <option value="TV">Tuvalu</option>
+                    <option value="UG">Uganda</option>
+                    <option value="UA">Ukraine</option>
+                    <option value="AE">United Arab Emirates</option>
+                    <option value="GB">United Kingdom</option>
+                    <option value="US">United States</option>
+                    <option value="UM">United States Minor Outlying Islands</option>
+                    <option value="UY">Uruguay</option>
+                    <option value="UZ">Uzbekistan</option>
+                    <option value="VU">Vanuatu</option>
+                    <option value="VE">Venezuela</option>
+                    <option value="VN">Viet Nam</option>
+                    <option value="VG">Virgin Islands (British)</option>
+                    <option value="VI">Virgin Islands (U.S.)</option>
+                    <option value="WF">Wallis and Futuna Islands</option>
+                    <option value="EH">Western Sahara</option>
+                    <option value="YE">Yemen</option>
+                    <option value="YU">Yugoslavia</option>
+                    <option value="ZM">Zambia</option>
+                    <option value="ZW">Zimbabwe</option>
+                </select>
+
+            <label for="anc">Ancestor</label>
+                <select id="anc" class='j' required>
+                    <option value="" selected disabled>Select your ancestor</option>
+                    <option value="A">Africa</option>
+                    <option value="E">Europe</option>
+                    <option value="As">Asia</option>
+                    <option value="NA">North America</option>
+                    <option value="SA">South America</option>
+                    <option value="O">Oceania</option>
+                </select>
+
+            <label for="insure">Health insurance</label>
+                <select id="insure"  required>
+                    <option value="N/A" selected disabled>Select your syndicate</option>
+                    <option value="">Doctors Syndicate</option>
+                    <option value="">Pharmacists Syndicate</option>
+                    <option value="">Engineers Syndicate</option>
+                    <option value="">Scientists Syndicate</option>
+                    <option value="">Musical Professions Syndicate</option>
+                    <option value="">other</option>
+                    <option value="">I don't have health insurance</option>
+                </select>
+
+            <label for="spot_loc">Noticed spot location</label>
+                <select id="spot_loc" class='j' required>
+                    <option value="N/A" selected disabled>Select spot location</option>
+                    <option value="neck">Neck</option>
+                    <option value="head">Head</option>
+                    <option value="arm">Arm</option>
+                    <option value="face">Face</option>
+                    <option value="leg">Leg</option>
+                    <option value="back">Back</option>
+                    <option value="cheast">Cheast</option>
+                </select>
+            <div id="another_sec">
+                <label for="other_spots">Other spots</label>
+                    <select id="other_spots" class='j' required>
+                        <option value="N/A" selected disabled>
+                        Have you ever noticed other large brown spots with dark spots on your
+                        body?
+                        </option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                    </select>
+                <label for="hair_col">Hair Color</label>
+                    <select id="hair_col" class='j' required>
+                        <option value="N/A" selected disabled>
+                        What was your NATURAL hair colour when you were 21 years of age?
+                        </option>
+                        <option value="Black">Black</option>
+                        <option value="Brown/Blond">Brown/Blond</option>
+                        <option value="Red/Auburn">Red/Auburn</option>
+                    </select>
+                <label for="relatives">Relatives</label>
+                    <select id="relatives" class='j' required>
+                        <option value="N/A" selected disabled>
+                        Have any close blood relatives ever been told that they have
+                        MELANOMA?
+                        </option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                    </select>
+
+                <label for="cancer">Sun Spot</label>
+                    <select id="cancer" class='j' required>
+                        <option value="N/A" selected disabled>
+                        About how many separate SUNSPOTS or SKIN CANCERS have you ever
+                        had FROZEN or BURNT OFF your skin?
+                        </option>
+                        <option value="None">None</option>
+                        <option value="1:5">1 : 5</option>
+                        <option value="6:20">6 : 20</option>
+                        <option value="More_than_20">More than 20</option>
+                    </select>
+
+                <label for="skin_canc">Skin Cancer</label>
+                    <select id="skin_canc" class='j' required>
+                        <option value="N/A" selected disabled>
+                        About how many separate SKIN CANCERS have you ever had CUT OFF
+                        your skin?
+                        </option>
+                        <option value="None">None</option>
+                        <option value="1">1</option>
+                        <option value="2 or more">2 or more</option>
+                    </select>
+
+                <label for="check">Checked</label>
+                    <select id="check" class='j' required>
+                        <option value="N/A" selected disabled>
+                        During the past 3 years how many times has ALL or NEARLY ALL of
+                        your skin been deliberately checked by a doctor?
+                        </option>
+                        <option value="Never">Never</option>
+                        <option value="Once">Once</option>
+                        <option value="Two_or_more">Two or more</option>
+                    </select>
+
+                <label for="future_risk">Future Risk</label>
+                    <select id="future_risk" class='j' required>
+                        <option value="N/A" selected disabled>
+                        How likely do you think it is that you will get melanoma at some time in the future?
+                        </option>
+                        <option value="High_unlikely">High unlikely</option>
+                        <option value="Somewhat_unlikely">Somewhat unlikely</option>
+                        <option value="About_the_same_as_other">
+                        About the the same as other
+                        </option>
+                        <option value="Somewhat_more_likely">Somewhat more likely</option>
+                        <option value="High_likely">High likely</option>
+                    </select>
+
+                <label for="sun_screen">Sun Screen</label>
+                    <select id="sun_screen" class='j' required>
+                        <option value="N/A" selected disabled>
+                        During the past year, about how often did you apply sunscreen?
+                        </option>
+                        <option value="Never">Never</option>
+                        <option value="Some or all time">Some or all time</option>
+                    </select>
+
+                <label for="moles">Moles</label>
+                    <select id="moles" class='j' required>
+                        <option value="N/A" selected disabled>
+                        When you were 21 years of age, how many MOLES did you have on
+                        your skin?
+                        </option>
+                        <option value="No_moles">No moles</option>
+                        <option value="Few_moles">Few moles</option>
+                        <option value="Some_moles">Some moles</option>
+                        <option value="Many_moles">Many moles</option>
+                    </select>
+
+                <label for="tan">Tan Level</label>
+                    <select id="tan" class='j' required>
+                        <option value="N/A" selected disabled>
+                        Which of the following would happen to your skin?
+                        </option>
+                        <option value="Tan_deeply">Tan deeply</option>
+                        <option value="Tan_moderately">Tan moderately</option>
+                        <option value="Tan_lightly">Tan lightly</option>
+                        <option value="Not_Tan">Not Tan</option>
+                    </select>
+            </div>
+
+
+            </div>
+
+            <!--------------------------start right div--------------------------------->
+
+            <div class="col_right">
+                <label for="edit_mail">Email</label>
+                    <input type="email" id="edit_mail_" class='j' placeholder="zayn22@example.com" required>
+                <label for="edit_number_">Phone</label>
+                    <input type="tel" id="edit_number_" class='j' pattern="^(00201|\+201|01)[0-2,5]{1}[0-9]{8}$" placeholder="+2010xxxxxxx" required>
+                <label for="age__">Age</label>
+                    <select id="age__" class='j' required>
+                        <option value="" selected disabled>Select your age</option>
+                        <option value="Less_than_46">Less than 46</option>
+                        <option value="46:50">46 : 50</option>
+                        <option value="51:55">51 : 55</option>
+                        <option value="56:60">56 : 60</option>
+                        <option value="61:65">61 : 65</option>
+                        <option value="66_or_older">66 or older</option>
+                    </select>
+                <label for="Gen">Gender</label>
+                    <select id="Gen" class='j' required>
+                        <option value="" disabled selected>Select your gender</option>
+                        <option>Male</option>
+                        <option>Female</option>
+                    </select>
+                <label for="skin">Skin Color</label>
+                    <select id="skin" class='j' required>
+                        <option value="" selected disabled>Select your skin color</option>
+                        <option value="very_white">Pale skin</option>
+                        <option value="fair white">Medium skin</option>
+                        <option value="Olive_skin">Olive skin</option>
+                        <option value="dark">Naturally brown skin</option>
+                        <option value="Black_skin">Black skin</option>
+                    </select>
+                <label for="risk">Risk Rate</label>
+                    <select id="risk" required>
+                        <option value="" selected disabled>Predict risk rate</option>
+                        <option value="">High</option>
+                        <option value="">Medium</option>
+                        <option value="">Low</option>
+                  </select>
+            </div>
+        </div>
+        <button type="submit" id="sav">Submit</button>
+      </form>
+
+
+
+
+
+  </body>
+  <script src="{{ url_for('static',filename='js/file.js') }}"></script>

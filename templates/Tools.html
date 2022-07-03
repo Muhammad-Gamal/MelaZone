@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Tools</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel ="stylesheet" type="text/css" href="{{url_for('static', filename='css/style.css')}}">
+        <link rel="icon" type="image/icon type" href="{{url_for('static', filename='images/logo.ico')}}">
+</head>
+<body>
+    <!-----------------left nav bar----------------->
+
+    <nav class="left-nav-home">
+        <ul class="left-ul-home">
+            <a href="/rhome"><img src="{{url_for('static', filename='images/logo.png')}}" alt="logo" width="25" height="25"></a>
+            <a href="/rhome"><h2>MELA'ZONE</h2></a>
+            <div class="dropdown">
+                <button class="dropbtn">Tools</button>
+                <div class="dropdown-content">
+                  <a href="/tools">Image Processing</a>
+                  <a href="/q_test_user">Quik Test</a>
+                </div>
+            </div>
+            <a href="/gallery"><li id="gall_home">Gallery</li></a>
+            <a href="/contact"><li id="contact_home">Contact</li></a>
+            <a href="/pricing"><li id="price_home">Pricing</li></a>
+        </ul>
+    </nav>
+
+    <!-----------------right nav bar----------------->
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <div class="prof_img">
+            <div class="image_side">
+                <img src="{{url_for('static', filename=image)}}" id="photo">
+            </div>
+        </div>
+            <span>
+                <span id="name">{{name}}</span> <br>
+                <span id="ac_span">{{role}}</span>
+            </span>
+            <a href="/profile">Edit profile</a>
+            <a href="/improve">Improve user experience</a>
+            <a href="#">Privacy policy</a>
+            <a href="#">FQA</a>
+            <a href="/logout"><button id="side_btn">Log Out</button></a>
+        </div>
+    <nav id="ac" onclick="openNav()">
+        <div class="profile-pic-div-1">
+                    <img src="{{url_for('static', filename=image)}}" id="photo">
+                </div>
+
+        <span class="account_info">
+            <span id="ac_name">{{name}}</span> <br>
+            <span id="ac_id">{{role}}</span>
+        </span>
+    </nav>
+
+    <style> 
+        input[type=file] {
+          border: none;
+          color: white;
+          padding: 16px 32px;
+          background-color: #32ccff;
+          font-family: 'raleway', sans-serif;
+          text-transform: Uppercase;
+          font-weight: 600;
+          width: 45%;
+          height: 45px;
+          text-decoration: none;
+          margin: 4px 2px;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+        </style>  
+        <style> 
+            input[type=submit] {
+            border: none;
+            color: white;
+            padding: 16px 32px;    
+            background-color: #D94B2E;
+            font-family: 'raleway', sans-serif;
+            text-transform: Uppercase;
+            font-weight: 600;
+            width: 60%;
+            height: 45px;
+            text-decoration: none;
+            margin: 4px 2px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        </style>  
+
+    <div>
+        <svg class="Rectangle_5_2">
+            <rect id="Rectangle_5_2" rx="10" ry="10" x="0" y="0" width="500" height="400">
+            </rect>
+        </svg>
+        <!--<button id="upload_btn">Upload Image</button>-->
+        <!--<svg class="icons8_picture" viewBox="2 5 120.033 92.333">
+            <path id="icons8_picture" d="M 11.23328590393066 5.000001430511475 C 6.131896495819092 5.000001430511475 2 9.131895065307617 2 14.23328590393066 L 2 88.09957885742188 C 2 93.20095825195312 6.131896495819092 97.33285522460938 11.23328590393066 97.33285522460938 L 112.7994384765625 97.33285522460938 C 117.9008255004883 97.33285522460938 122.03271484375 93.20095825195312 122.03271484375 88.09957885742188 L 122.03271484375 14.23328590393066 C 122.03271484375 9.131895065307617 117.9008255004883 5.000001430511475 112.7994384765625 5.000001430511475 L 11.23328590393066 5.000001430511475 Z M 98.94950103759766 18.84992980957031 C 104.0508880615234 18.84992980957031 108.1827850341797 22.98182487487793 108.1827850341797 28.08321762084961 C 108.1827850341797 33.18460464477539 104.0508880615234 37.31650543212891 98.94950103759766 37.31650543212891 C 93.84811401367188 37.31650543212891 89.71621704101562 33.18460464477539 89.71621704101562 28.08321762084961 C 89.71621704101562 22.98182487487793 93.84811401367188 18.84992980957031 98.94950103759766 18.84992980957031 Z M 34.31650543212891 37.32573318481445 C 37.17535781860352 37.32573318481445 40.03375625610352 38.4171142578125 42.21511840820312 40.59847640991211 L 57.27368545532227 55.65703582763672 L 62.016357421875 60.39971160888672 L 67.35457611083984 65.73793792724609 C 69.30281066894531 67.68616485595703 72.4481201171875 67.66770172119141 74.39634704589844 65.71947479248047 C 76.34918975830078 63.77124786376953 76.34918975830078 60.60330963134766 74.39634704589844 58.65046691894531 L 69.07659149169922 53.33948516845703 L 72.58431243896484 49.83176040649414 C 76.94704437255859 45.46903228759766 84.01881408691406 45.46903228759766 88.38153839111328 49.83176040649414 L 108.1827850341797 69.63300323486328 L 108.1827850341797 83.48292541503906 L 15.84992980957031 83.48292541503906 L 15.84992980957031 51.16643142700195 L 26.41770172119141 40.59847640991211 C 28.59906578063965 38.4171142578125 31.45764541625977 37.32573318481445 34.31650543212891 37.32573318481445 Z">
+            </path>
+        </svg>-->
+        <div class="center">
+            <form action="/tools", method="post" enctype="multipart/form-data">
+                <input type="file" name="imagefile">
+                <input type="submit" value="Predict">
+            </form>
+            <div class="form-input">
+                <div class="preview">
+                    <img id="file-ip-1-preview">
+                </div>
+                <!--<input type="file" id="file-ip-1"  accept="image/*" onchange="showPreview(event);">
+                <label for="file-ip-1" id="img__btn">Upload Image</label>-->
+                
+            </div>
+          </div> 
+        <div class="vl"></div>
+    </div>
+
+
+
+<div>
+<!--<button id="result_btn"> Download Result </button>
+-->
+
+</div>
+
+{% if prediction %}
+        <img id="Z" src="{{ url_for('plotting')}}">
+{% endif %}
+
+<script>
+    function showPreview(event){
+  if(event.target.files.length > 0){
+    var src = URL.createObjectURL(event.target.files[0]);
+    var preview = document.getElementById("file-ip-1-preview");
+    preview.src = src;
+    preview.style.display = "block";
+  }
+}
+    function openNav() {
+        document.getElementById("mySidebar").style.width = "300px";
+        document.getElementById("main").style.marginRight = "250px";
+}
+            
+    function closeNav() {
+        document.getElementById("mySidebar").style.width = "0";
+        document.getElementById("main").style.marginRight= "0";
+}       
+
+</script>
+</body>
+</html>

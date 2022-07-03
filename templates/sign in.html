@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel ="stylesheet" type="text/css" href="{{url_for('static', filename='css/style.css')}}">
+    <link rel="icon" type="image/icon type" href="{{url_for('static', filename='images/logo.ico')}}">
+    <title>Sign In</title>
+    <script>
+        function values()
+        {
+            var email=document.getElementById("email").value;
+            localStorage.setItem("textvalue",email);
+            return false;
+        }
+    </script>
+</head>
+<body>
+    <div class="SignIn-Mela-Logo">
+        <a href="/"></a><img id="SignIn-Mela-Logo" src="{{url_for('static', filename='images/logo.png')}}" alt="logo" width="30" height="30">
+        <h2 id="SignIn-Mela-h">MELA'ZONE</h2></a>
+        <svg class="dark-rec2">
+            <rect id="dark-rec2" rx="0" ry="0" x="0" y="0" width="1920" height="1005"></rect>
+        </svg>
+    </div>
+
+    <div>
+        <svg class="Rectangle_5">
+            <rect id="Rectangle_5" rx="10" ry="10" x="0" y="0" width="674" height="450">
+            </rect>
+        </svg>    
+    </div>
+
+    
+    <form class="form"  action="/signin_btn" method="post">
+        <input type="email" id="email" name="Email" placeholder="Email" onkeyup="values()" required><br><br>
+        <input type="password" id="pass" name="Password" placeholder="Password" required><br><br>
+        <a href="#"><button id="sign__in">Sign In</button></a>
+        <a href="#"><h6>Forget Password ?</h6></a>
+        <h6 id="or">OR</h6>
+    </form> 
+    {% with messages = get_flashed_messages()  %}
+    {% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+      {{ message }}
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">×</span>
+      </button>
+    </div>
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
+    <a href="/login"><button id="google_signin">Google</button></a> <br/>
+
+    <div id="my-signin2" data-width="300" data-height="200" data-longtitle="true"></div>
+    <div class="dont_have_acc">
+      <span id="dont_have_acc">Don't have an account?</span>
+      <a href="/signup" id="sign__up__acc"><span>Sign up</span></a>
+    </div>
+</body>
+</html>

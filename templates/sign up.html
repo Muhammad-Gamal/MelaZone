@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel ="stylesheet" type="text/css" href="{{url_for('static', filename='css/style.css')}}">
+    <link rel="icon" type="image/icon type" href="{{url_for('static', filename='images/logo.ico')}}">
+    <title>Sign Up</title>
+</head>
+<body>
+    <div class="SignIn-Mela-Logo">
+        <a href="/">
+            <img id="SignIn-Mela-Logo" src="{{url_for('static', filename='images/logo.png')}}" alt="logo" width="30" height="30">
+            <h2 id="SignIn-Mela-h">MELA'ZONE</h2>
+        </a>
+        <svg class="dark-rec2">
+            <rect id="dark-rec2" rx="0" ry="0" x="0" y="0" width="1920" height="1005"></rect>
+        </svg>
+    </div>
+    <div>
+        <span id="get_free">Get Started For Free</span>
+        <span id="free_5_images" >Processing up to 5 images first month for free</span>
+    </div>
+    <div>
+        <svg class="Rectangle_5_1">
+            <rect id="Rectangle_5" rx="10" ry="10" x="0" y="0" width="1000" height="420">
+            </rect>
+        </svg>    
+    </div>
+
+    <form class="form__up" action="/signup_process" method="post">
+        <div class="form__up__left" method="post">
+            <input type="text" id="FullName__up" name="FullName" placeholder="Full Name" required><br><br>
+            <input type="email" id="email__up" name="Email" placeholder="Email" required><br><br>
+            <select type="text" id="job" name="job" required aria-placeholder=" select your role ">
+                
+                <option value="1">Patient</option>
+                <option value="2">Doctor</option>
+                <option value="3">Hospital</option>
+            </select>
+            <div class="Gender">
+                <span>Gender :</span>
+                <input type="radio" id="male" name="Gender" value="Male">
+                    <label for="male">Male</label>
+                <input type="radio" id="female" name="Gender" value="Female">
+                    <label for="female">Female</label><br>
+            </div>
+        </div>
+    
+        <div class="form__up__right" method="post">
+          <input type="text" id="NickName__up" name="NickName" placeholder="Nick Name" required><br><br>
+          <input type="password" id="Pass__up" name="Password" placeholder="Password" required><br><br>
+          <input type="number" id="Age__up" name="Age" placeholder="Age" required><br><br>
+          <input type="tel" id="Phone__up" name="phone" placeholder="+201xxx-xxx-xxx" pattern="^(00201|\+201|01)[0-2,5]{1}[0-9]{8}$" required><br><br>
+        </div>
+        <div class="form-group ">
+            {% with messages = get_flashed_messages()  %}
+            {% if messages %}
+            {% for message in messages %}
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+              {{ message }}
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">×</span>
+              </button>
+            </div>
+            
+            {% endfor %}
+            {% endif %}
+            {% endwith %}
+        <div class="have__acc">
+          
+            <button id="sign__up">Sign Up</button>
+            <h6 id="or__up">OR</h6>
+            <div class="have__acc__1">
+                <span id="have_acc">Do you have an account?</span>
+                <a href="/signin" id="sign__in__acc"><span>Sign In</span></a>
+            </div>
+            
+        </div>
+        
+    </form>
+
+</body>
+</html>

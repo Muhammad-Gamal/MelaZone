@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Gallery</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel ="stylesheet" type="text/css" href="{{url_for('static', filename='css/style.css')}}">
+        <link rel="icon" type="image/icon type" href="{{url_for('static', filename='images/logo.ico')}}">
+</head>
+</head>
+<body>
+    <!-----------------left nav bar----------------->
+
+    <nav class="left-nav-home">
+        <ul class="left-ul-home">
+            <a href="/rhome"><img src="{{url_for('static', filename='images/logo.png')}}" alt="logo" width="25" height="25"></a>
+            <a href="/rhome"><h2>MELA'ZONE</h2></a>
+            <div class="dropdown">
+                <button class="dropbtn_gall">Tools</button>
+                <div class="dropdown-content">
+                  <a href="/tools">Image Processing</a>
+                  <a href="/q_test_user">Quik Test</a>
+                </div>
+            </div>
+            <a href="/gallery"><li id="gall">Gallery</li></a>
+            <a href="/contact"><li id="contact_gall">Contact</li></a>
+            <a href="/pricing"><li id="price_gall">Pricing</li></a>
+        </ul>
+    </nav>
+
+    <!-----------------right nav bar----------------->
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <div class="prof_img">
+            <div class="image_side">
+                <img src="{{url_for('static', filename=image)}}" id="photo">
+            </div>
+        </div>
+            <span>
+                <span id = "name">{{name}}</span> <br>
+                <span id="ac_span">{{role}}</span>
+            </span>
+            <a href="/profile">Edit profile</a>
+            <a href="/improve_ux">Improve user experience</a>
+            <a href="#">Privacy policy</a>
+            <a href="#">FQA</a>
+            <a href="/logout"><button id="side_btn">Log Out</button></a>
+        </div>
+    <nav id="ac" onclick="openNav()">
+        <div class="profile-pic-div-1">
+            <img src="{{url_for('static', filename=image)}}" id="photo">
+        </div>
+
+        <span class="account_info">
+            <span id="ac_name">{{name}}</span> <br>
+            <span id="ac_id">{{role}}</span>
+        </span>
+    </nav>
+    <!-----------------right nav bar----------------->
+
+    <div>
+        <div id="Group_154">
+            <div id="Photo_Gallery">
+                <span>Photo Gallery</span>
+            </div>
+            <div id="You_can_search_for_similar_pho">
+                <span>You can search for similar photo to your spotted part of your <br/>skin, If you see something similar to yours we prefer that <br/>you use one of our tools to assure your health.  </span>
+            </div>
+        </div>    
+    </div>
+
+    <div class="container_gall1">
+        <div class="box">
+          <img src="{{url_for('static', filename='images/gallery/AK/ISIC_0027452.png')}}">
+          <span>AK</span>
+        </div>
+        <div class="box">
+          <img src="{{url_for('static', filename='images/gallery/BCC/ISIC_0026496.jpg')}}">
+          <span>BCC</span>
+        </div>
+        <div class="box">
+          <img src="{{url_for('static', filename='images/gallery/BKL/ISIC_0013918_downsampled.jpg')}}">
+          <span>BKL</span>
+        </div>
+    </div>
+    <div class="container_gall2">
+        <div class="box1">
+          <img src="{{url_for('static', filename='images/gallery/DF/ISIC_0026313.jpg')}}">
+          <span>DF</span>
+        </div>
+        <div class="box1">
+            <img src="{{url_for('static', filename='images/gallery/MEL/ISIC_0000420_downsampled.jpg')}}">
+            <span>MEL</span>
+        </div>
+        <div class="box1">
+            <img src="{{url_for('static', filename='images/gallery/NV/ISIC_0000001.jpg')}}">
+            <span>NV</span>
+        </div>
+    </div>
+    <div class="container_gall3">
+        <div class="box2">
+            <img src="{{url_for('static', filename='images/gallery/SCC/ISIC_0027795.jpg')}}">
+            <span>SCC</span>
+        </div>
+        <div class="box2">
+            <img src="{{url_for('static', filename='images/gallery/UNK/ISIC_0171946.jpg')}}">
+            <span>UNK</span>
+        </div>
+        <div class="box2">
+            <img src="{{url_for('static', filename='images/gallery/VASC/ISIC_0024669.jpg')}}">
+            <span>VASC</span>
+        </div>
+    </div>
+    <!--<div class="gallery_sections">
+        <svg class="Rectangle_5_3">
+            <rect id="Rectangle_5_3" rx="500" ry="500" x="0" y="0" width="250" height="250">
+            </rect>
+        </svg>
+
+        <svg class="Rectangle_5_4">
+            <rect id="Rectangle_5_4" rx="500" ry="500" x="0" y="0" width="250" height="250">
+            </rect>
+        </svg>
+
+        <svg class="Rectangle_5_5">
+            <rect id="Rectangle_5_5" rx="500" ry="500" x="0" y="0" width="250" height="250">
+            </rect>
+        </svg>
+
+        <svg class="Rectangle_5_6">
+            <rect id="Rectangle_5_6" rx="500" ry="500" x="0" y="0" width="250" height="250">
+            </rect>
+        </svg>
+    </div>
+    <div>
+        <div id="Group_126">
+            <div id="Recurrent_basal_cell_carcinoma">
+                <span>Recurrent<br/>basal cell carcinoma</span>
+            </div>
+            <div id="n_">
+                <span>#1</span>
+            </div>
+        </div>
+        <div id="Group_127">
+            <div id="Squamous_cell_carcinoma">
+                <span>Squamous<br/>cell carcinoma</span>
+            </div>
+            <div id="n_2">
+                <span>#2</span>
+            </div>
+        </div>
+        <div id="Group_128">
+            <div id="Melanoma">
+                <span>Melanoma</span>
+            </div>
+            <div id="n_3">
+                <span>#3</span>
+            </div>
+        </div>
+        <div id="Group_129">
+            <div id="Markel">
+                <span>Merkel<br/>cell carcinoma</span>
+            </div>
+            <div id="n_4">
+                <span>#4</span>
+            </div>
+        </div>                   
+    </div>-->
+
+
+</body>
+
+<script>
+    function openNav() {
+      document.getElementById("mySidebar").style.width = "300px";
+      document.getElementById("main").style.marginRight = "250px";
+    }
+    
+    function closeNav() {
+      document.getElementById("mySidebar").style.width = "0";
+      document.getElementById("main").style.marginRight= "0";
+    }
+</script>
+</html>

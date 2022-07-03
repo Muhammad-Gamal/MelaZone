@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Home</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel ="stylesheet" type="text/css" href="{{url_for('static', filename='css/style.css')}}">
+        <link rel="icon" type="image/icon type" href="{{url_for('static', filename='images/logo.ico')}}">
+        
+            
+    </head>
+    <body>
+            
+            <!-----------------left nav bar----------------->
+
+            <nav class="left-nav">
+                <ul class="left-ul">
+                    <img src="{{url_for('static', filename='images/logo.png')}}" alt="logo" width="25" height="25">
+                    <h2>MELA'ZONE</h2>
+                    <a href="#dark-rec"><li id="s">Solutions</li></a>
+                    <a href="/pricing"><li id="p">Price</li></a>
+                </ul>
+            </nav>
+
+            <!-----------------right nav bar----------------->
+
+            <div id="mySidebar" class="sidebar">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                <div class="prof_img">
+                    <div class="image_side">
+                        <img src="{{url_for('static', filename=image)}}" id="photo">
+                    </div>
+                </div>
+                    <span>
+                        <span id = "name">{{name}}</span> <br>
+                        <span id="ac_span">{{role}}</span>
+                    </span>
+                    <a href="/profile">Edit profile</a>
+                    <a href="/improve_ux">Improve user experience</a>
+                    <a href="#">Privacy policy</a>
+                    <a href="#">FQA</a>
+                    <a href="/logout"><button id="side_btn">Log Out</button></a>
+                </div>
+            <nav id="ac" onclick="openNav()">
+                
+                <div class="profile-pic-div-1">
+                    <img src="{{url_for('static', filename=image)}}" id="photo">
+                </div>
+
+                <span class="account_info">
+                    <span id="ac_name">{{name}}</span> <br>
+                    <span id="ac_id">{{role}}</span>
+                </span>
+            </nav>
+            <!-----------------Soon feature----------------->
+
+        <div onclick="application.goToTargetView(event)" id="Future_Feature">
+            <svg class="Rec_1">
+                <rect id="Rec_1" rx="15" ry="15" x="-100" y="-100" width="300" height="40">
+                </rect>
+            </svg>
+            <div id="Sequence_Analysis_Tool">
+                <p>Sequence Analysis Tool</p>
+            </div>
+            <svg class="arc" viewBox="910.374 298 11.714 29.429">
+                <path id="arc" d="M 756.373779296875 200 L 768.0882568359375 211.7144470214844 L 756.373779296875 223.4288940429688">
+                </path>
+            </svg>
+                <div>
+                    <svg class="Rec_2" >
+                        <rect id="Rec_2" rx="15" ry="15" x="-100" y="-100" width="60" height="40">
+                        </rect>
+                    </svg>
+                </div>
+                <div id="SOON">
+                    <h4>SOON</h4>
+                </div>
+        </div>
+
+            <!-----------------main image ( in the left )----------------->
+
+        <div id="Img">
+            <img id="photo-1" src="{{url_for('static', filename='images/pexels-cottonbro-5701546.png')}}">     
+        </div>
+
+             <!-----------------main paragraph----------------->
+
+        <p class="text-1">
+            Melanoma Image Processing <br> Using AI Techniques
+        </p>
+
+        <div class="try-it">
+            <a href="/tools"><button id="try-it-btn">Try It Now</button></a>
+            <a href="/q_test_user"><button id="quik-test-btn">Quik Test</button></a>
+            
+        </div>
+
+        <div>
+            <svg class="dark-rec">
+                <rect id="dark-rec" rx="0" ry="0" x="0" y="0" width="1920" height="1005"></rect>
+            </svg>
+            <hr id="hr-0">
+            <h3 id="h3-1">Our Solutions</h3>
+            <img id="photo-2" src="{{url_for('static', filename='images/pexels-cottonbro-5701545.png')}}" alt="image">
+            <h3 id="h">Try Accurate Tools</h3>
+            <p id="p1"> With the existence of this accurate tools it's become much easier to speedy <br> 
+                detect melanoma cancer and save more lives. 
+            </p>
+            <a href="/tools"><button id="ip">Image processing</button></a>
+        </div>
+
+        
+
+        <div>
+            <svg class="Path_668_b" viewBox="0 0 1920 1149.061">
+                <linearGradient id="Path_668_b" spreadMethod="pad" x1="0.5" x2="0.5" y1="0" y2="1">
+                    <stop offset="0" stop-color="#16232d" stop-opacity="1"></stop>
+                    <stop offset="0.9601" stop-color="#0b141d" stop-opacity="1"></stop>
+                    <stop offset="1" stop-color="#070d13" stop-opacity="1"></stop>
+                </linearGradient>
+                <path id="Path_668_b" d="M 0 0 L 1920 0 L 1920 807.343505859375 L 0 1149.06103515625 L 0 0 Z">
+                </path>
+            </svg>
+            <hr id="hr-1">
+            <h3 id="h3-2">Your tool for detecting and <br>following up on Melanoma</h3>
+            <hr id="hr-2">
+            <div class="mov">
+                
+
+                <svg class="Ellipse"><ellipse rx="15" ry="15" cx="15" cy="15"></ellipse></svg>
+                <svg class="Ellipse-1"><ellipse rx="15" ry="15" cx="15" cy="15"></ellipse></svg>
+                <svg class="Ellipse-2"><ellipse rx="15" ry="15" cx="15" cy="15"></ellipse></svg>
+            
+                <svg class="arow_1" viewBox="0 0 56 35">
+                    <path d="M 25.63838958740234 22.21178245544434 L 0 22.21178245544434 L 0 12.11540699005127 L 25.63838958740234 12.11540699005127 L 25.63838958740234 0 L 55.99980163574219 17.50010108947754 L 25.63838958740234 35.00020217895508 L 25.63838958740234 22.21178245544434 Z">
+                    </path>
+                </svg>
+                <svg class="arow_2" viewBox="0 0 56 35">
+                    <path d="M 25.63838958740234 22.21178245544434 L 0 22.21178245544434 L 0 12.11540699005127 L 25.63838958740234 12.11540699005127 L 25.63838958740234 0 L 55.99980163574219 17.50010108947754 L 25.63838958740234 35.00020217895508 L 25.63838958740234 22.21178245544434 Z">
+                    </path>
+                </svg>
+
+                <img id="det" src="{{url_for('static', filename='images/388.svg')}}" alt="" width="150" height="150">
+                <img id="analyze" src="{{url_for('static', filename='images/411.svg')}}" alt="" width="150" height="150">
+                <img id="manage" src="{{url_for('static', filename='images/264.svg')}}" alt="" width="150" height="150">
+            </div>
+
+            <div class="description">
+                <h5 id="det-txt">Detect</h5>
+                <h5 id="analyze-txt">Analyze</h5>
+                <h5 id="manage-txt">Manage</h5>
+            </div>
+
+            <div class="desc-txt">
+                <p id="desc-txt-p1">
+                    Detect the spotted area of skin and take a <br> 
+                    goodphoto to it and upload it in our website.
+                </p>
+                
+                <p id="desc-txt-p2">
+                    With the use of image processing we could <br>
+                    analyze your uploaded photo and get you <br>
+                    very high result accuracy.  
+                </p>
+
+                <p id="desc-txt-p3">
+                    After making sure that you are really melanoma <br>
+                    cancer patient we give you suggestions for <br>
+                    better recovery. 
+                </p>
+
+            </div>
+
+        </div>
+
+        <div>
+            <svg class="Rectangle_49">
+                <rect id="Rectangle_49" rx="0" ry="0" x="0" y="0" width="1920" height="891">
+                </rect>
+            </svg>        
+        </div>
+
+    
+
+        <script>
+
+            function openNav() {
+            document.getElementById("mySidebar").style.width = "300px";
+            document.getElementById("main").style.marginRight = "250px";
+            }
+            
+            function closeNav() {
+            document.getElementById("mySidebar").style.width = "0";
+            document.getElementById("main").style.marginRight= "0";
+            }
+            
+        </script>
+    </body>
+</html>

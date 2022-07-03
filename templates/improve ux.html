@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel ="stylesheet" type="text/css" href="{{url_for('static', filename='css/style.css')}}">
+    <link rel="icon" type="image/icon type" href="{{url_for('static', filename='images/logo.ico')}}"/>
+
+  <title>Improve user experience</title>
+</head>
+
+<body>
+  <div>
+    <svg class="dark-rec2">
+      <rect
+        id="dark-rec2"
+        rx="0"
+        ry="0"
+        x="0"
+        y="0"
+        width="1920"
+        height="1005"
+      ></rect>
+    </svg>
+    <a href="/rhome">
+    <img
+      id="SignIn-Mela-Logo"
+      src="{{url_for('static', filename='images/logo.png')}}"
+      alt="logo"
+      width="30"
+      height="30"/>
+    <h2 id="SignIn-Mela-h">MELA'ZONE</h2></a>
+    <svg class="dark-rec2">
+      <rect
+        id="dark-rec2"
+        rx="0"
+        ry="0"
+        x="0"
+        y="0"
+        width="1920"
+        height="3005"
+      ></rect>
+    </svg>
+  </div>
+  <!------------------ progressbar ---------------->
+
+  <div class="e">
+    <svg class="Ellipse_43">
+      <ellipse id="Ellipse_43" rx="25" ry="25" cx="48" cy="48"></ellipse>
+    </svg>
+
+    <svg class="Ellipse_44">
+      <ellipse id="Ellipse_44" rx="25" ry="25" cx="48" cy="48"></ellipse>
+    </svg>
+
+    <svg class="Ellipse_45">
+      <ellipse id="Ellipse_45" rx="25" ry="25" cx="48" cy="48"></ellipse>
+    </svg>
+
+    <svg class="Ellipse_46">
+      <ellipse id="Ellipse_46" rx="25" ry="25" cx="48" cy="48"></ellipse>
+    </svg>
+
+    <svg class="Ellipse_47">
+      <ellipse id="Ellipse_47" rx="25" ry="25" cx="48" cy="48"></ellipse>
+    </svg>
+
+    <span class="improve">
+      <span id="improve1">1</span>
+      <span id="improve2">2</span>
+      <span id="improve3">3</span>
+      <span id="improve4">4</span>
+      <span id="improve5">5</span>
+    </span>
+
+    <span class="ag">
+      <hr id="improve_hr1" />
+      <hr id="improve_hr2" />
+      <hr id="improve_hr3" />
+      <hr id="improve_hr4" />
+    </span>
+  </div>
+
+  <!------------------ questions ------------------->
+<form action="/improve_ux" method="post" >
+  <div class="form-step form-step-active">
+    <div class="input-group">
+      <span id="que">What is your first reaction to this?</span>
+      <input type="text" id="improve_box"  name="q1" required />
+      <div>
+        <button type="submit" class="btn btn-next" id="improve_submit">
+          Next
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-step">
+    <div class="input-group">
+      <span id="que2">How doese this compare to your expectations?</span>
+      <input type="text" id="improve_box2"  name="q2" required />
+      <div class="btns-group">
+        <button type="submit" class="btn btn-next" id="improve_submit2">
+          Next
+        </button>
+        <button type="submit" class="btn btn-prev" onClick="funprev1()" id="improve_submit22">
+          Previous
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-step">
+    <div class="input-group">
+      <span id="que3">How do you think this going to help you?</span>
+      <input type="text" id="improve_box3"name="q3"  required />
+      <div class="btns-group">
+        <button type="submit" class="btn btn-next" id="improve_submit3">
+          Next
+        </button>
+        <button type="submit" class="btn btn-prev" id="improve_submit33" onClick="funprev2()">
+          Previous
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-step">
+    <div class="input-group">
+      <span id="que4">Why would some one use this?</span>
+      <input type="text" id="improve_box4"  name="q4" required />
+      <div class="btns-group">
+        <button type="submit" class="btn btn-next" id="improve_submit4">
+          Next
+        </button>
+        <button type="submit" class="btn btn-prev" id="improve_submit44" onClick="funprev3()">
+          Previous
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-step">
+    <div class="input-group">
+      <span id="que5">What is going through your mind as you look at this?</span>
+      <input type="text" id="improve_box5"  name="q5" required />
+      <div class="btns-group">
+        <button type="submit" class="btn btn-next" id="improve_submit5">
+          Submit
+        </button>
+
+        <button type="submit" class="btn btn-prev" id="improve_submit55" onClick="funprev4()" >
+          Previous
+        </button>
+      </div>
+    </div>
+  </div>
+</form>
+
+  <script>
+    const prevBtns = document.querySelectorAll('.btn-prev');
+    const nextBtns = document.querySelectorAll('.btn-next');
+    const formSteps = document.querySelectorAll('.form-step');
+
+    let formStepsNum = 0;
+
+    function funprev1() {
+      document.getElementById('improve_hr1').style.display = 'none';
+      document.getElementById('improve2').style.display = 'none';
+      document.getElementById('Ellipse_44').style.display = 'none';
+    }
+
+    function funprev2() {
+      document.getElementById('improve_hr2').style.display = 'none';
+      document.getElementById('improve3').style.display = 'none';
+      document.getElementById('Ellipse_45').style.display = 'none';
+    }
+
+    function funprev3() {
+      document.getElementById('improve_hr3').style.display = 'none';
+      document.getElementById('improve4').style.display = 'none';
+      document.getElementById('Ellipse_46').style.display = 'none';
+    }
+
+    function funprev4() {
+      document.getElementById('improve_hr4').style.display = 'none';
+      document.getElementById('improve5').style.display = 'none';
+      document.getElementById('Ellipse_47').style.display = 'none';
+    }
+    const im = document.querySelectorAll('.ag hr');
+    const ellipse = document.querySelectorAll('.e ellipse');
+    const imp = document.querySelectorAll('.improve span');
+    nextBtns.forEach((btn) => {
+      btn.addEventListener('click', (e) => {
+        if (e.target.parentNode.parentNode.children[1].value == '') {
+          e.target.parentNode.parentNode.children[1].style.border =
+            '0.1px solid red';
+        } else {
+          im.forEach((i) => {
+            im[formStepsNum].style.display = 'block';
+            ellipse[formStepsNum + 1].style.display = 'block';
+            imp[formStepsNum + 1].style.display = 'block';
+          });
+          if (e.target.textContent.trim() == 'Submit') {
+            window.location = 'Home.html';
+            // console.log('yes');
+          } else {
+            formStepsNum = formStepsNum + 1;
+            updateFormSteps();
+          }
+        }
+      });
+    });
+    prevBtns.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        formStepsNum--;
+        updateFormSteps();
+        im.forEach((a) => {
+          im[formStepsNum].style.display = 'none';
+        });
+      });
+    });
+
+    function updateFormSteps() {
+      formSteps.forEach((formStep) => {
+        formStep.classList.remove('form-step-active');
+      });
+
+      formSteps[formStepsNum].classList.add('form-step-active');
+      // console.log(2);
+    }
+  </script>
+</body>
+
+</html>

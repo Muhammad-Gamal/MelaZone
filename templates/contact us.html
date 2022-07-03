@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>contact us</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel ="stylesheet" type="text/css" href="{{url_for('static', filename='css/style.css')}}">
+        <link rel="icon" type="image/icon type" href="{{url_for('static', filename='images/logo.ico')}}">
+</head>
+<body>
+    <div>
+        <svg class="dark-rec2">
+            <rect id="dark-rec2" rx="0" ry="0" x="0" y="0" width="1920" height="1005"></rect>
+        </svg>
+    </div>
+    <div>
+        <svg class="Rectangle_46">
+		    <rect id="Rectangle_46" rx="0" ry="0" x="0" y="0" width="816" height="893">
+		    </rect>
+	    </svg>
+
+        <svg class="Rectangle_45">
+            <rect id="Rectangle_45" rx="0" ry="0" x="0" y="0" width="280" height="1080">
+            </rect>
+        </svg>
+    </div>
+    <div class="con_ico">
+        <img src="{{url_for('static', filename='images/phone.png')}}" alt="Phone icon" id="phonn_con">
+            <label for="phonn_con">+2001xxxxxxxxx</label>
+
+        <img src="{{url_for('static', filename='images/fax.png')}}" alt="Fax icon" id="fax_con">
+            <label for="fax_con">1-234-567-8099</label>
+
+        <img src="{{url_for('static', filename='images/email.png')}}" alt="Email icon" id="email_con">
+            <label for="email_con">mela@example.com</label>
+    	</div>
+    <div>
+        <h6 id="con-us">CONTACT US</h6>
+        <p id="con-p">We are hearing you ! <br> You can send us an Email to be in touch with us </p>
+        
+        <form action='/contact' method="post">
+            <div class="form__group field">
+                <input type="input" class="form__name" placeholder="Full Name" name="name" id='name' required />
+                <input type="email" class="form__email" placeholder="Email" name="email" id='Email' required />
+                <input type="text" class="form__message" placeholder="Your Message" name="message" id='message' required />
+                <a href="/"><input type="submit" id="form__submit"></a>
+            </div>
+            
+        </form>
+       
+    </div>
+
+    <div class="social__media">
+        <a href="https://www.facebook.com/"><img id="facebook" src="{{url_for('static', filename='images/facebook.png')}}"></a>
+        <a href="https://www.linkedin.com/"><img id="linkedin" src="{{url_for('static', filename='images/linkedin.png')}}"></a>
+        <a href="https://github.com/"><img id="github" src="{{url_for('static', filename='images/github.png')}}"></a>
+    </div>
+
+    
+</body>
+</html>
